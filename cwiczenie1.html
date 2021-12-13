@@ -8,14 +8,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         jQuery(function(){
-            $('.przycisk').click(function(){
+            $('.przycisk1').click(function(){
                 alert("test działania biblioteki JQuery");
             });
+        })
+
+        $(document).ready(function(){
+            $('.przycisk2').click(function(){
+                alert("Test działania biblioteki JQuery 2")
+            })
         })
     </script>
 </head>
 <body>
     <h1>Cwieczenie 1 - JQuery</h1>
-    <div class="przycisk">sprawdź</div>
+    <div class="przycisk1">sprawdź</div>
+    <div class="przycisk2">sprawdź2</div>
 </body>
 </html>
