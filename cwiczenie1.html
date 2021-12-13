@@ -14,15 +14,21 @@
         })
 
         $(document).ready(function(){
-            $('.przycisk2').click(function(){
+            $('#przycisk2').click(function(){
                 alert("Test działania biblioteki JQuery 2")
             })
         })
+        $(function(){
+            $('#przycisk3').click(function(){
+                alert("test działania 3 sposobu")
+            })
+        });
     </script>
 </head>
 <body>
     <h1>Cwieczenie 1 - JQuery</h1>
     <div class="przycisk1">sprawdź</div>
-    <div class="przycisk2">sprawdź2</div>
+    <div id="przycisk2">sprawdź2</div>
+    <div id="przycisk3">sprawdź3</div>
 </body>
 </html>
