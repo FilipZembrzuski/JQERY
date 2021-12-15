@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>JQuert</title>
+    <script>
+        $(document).ready(function(){
+            $("#przycisk").click(function(){
+                var szer = $(".napis").width();
+                var wys = $(".napis").height();
+                $("#info").html(szer + " : " + wys)
+            })
+        });
+    </script>
+</head>
+<body>
+    <div id="info"></div>
+    <div id="przycisk">Sprawdz wysokosc i szerokosc obiektu</div>
+    <div class="napis">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ipsam corporis quas natus officia alias nam totam earum, nobis quisquam laborum animi, quae reprehenderit itaque quia error fuga culpa doloremque.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum illo, provident officia quas ipsa accusantium perferendis quia sit soluta doloremque in quisquam consequuntur pariatur quos eveniet est iste magnam odio!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos in quibusdam explicabo illum laboriosam iste quia eligendi magni temporibus optio natus, laudantium libero ducimus labore aliquid illo rerum asperiores at?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio illum id amet. Neque explicabo, assumenda delectus dolorum consequatur eaque illum earum quis, blanditiis tempora sunt, vero sequi ab at temporibus.
+
+    </div>
+</body>
+</html>
