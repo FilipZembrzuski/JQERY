@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>JQuery- zadanie 5</title>
+    <style type="text/css">
+        .mojstyl{
+            background-color: aquamarine;
+            font-size:20px;
+            font-family:tahoma;
+            border: 2px black solid;
+            border-radius: 20px;
+            padding:15px;
+            width: 200px;
+            margin:auto;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function(){
+            /*
+            $("div").mouseover(function(){
+                $(this).addClass("mojstyl");
+            });
+            $("div").mouseout(function(){
+                $(this).removeClass("mojstyl");
+            });
+            */
+            $("div").mouseover(function(){
+                $(this).addClass("mojstyl");
+            }).mouseout(function(){
+                $(this).removeClass("mojstyl");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. A minima quisquam quos, nulla ex magnam laborum ipsam, corrupti quod cupiditate amet, dolores error molestiae adipisci debitis deserunt esse assumenda qui.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores quasi unde dolores exercitationem accusantium earum dolorum tempora impedit, neque quibusdam, eum molestiae corrupti deserunt cupiditate nesciunt similique praesentium ipsam natus!
+    </div>
+</body>
+</html>
