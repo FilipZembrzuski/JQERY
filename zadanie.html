@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>BUNGULATOR</title>
+    <style type="text/css">
+        html, body{
+            padding:0;
+            margin:0;
+        }
+        div#ogół{
+            width:100%;
+        }
+        div#plandnia{
+            text-align: center;
+            float:left;
+            width:50%;
+            background-color: wheat;
+            height:947px;
+        }
+        div#prawo{
+            float:right;
+            width:50%;
+            background-color: rgb(104, 104, 104);
+            height:947px;
+            text-align: center;
+        }
+        div#animacja{
+            height:300px;
+            color: rgba(255, 0, 0, 0.623);
+            background-color: rgb(32, 32, 32);
+            position:relative;
+        }
+        div#kal{
+            background-color: rgb(32, 32, 32);
+            height:615px;
+            color: tomato;
+        }
+        #kwadracik{
+            height: 50px;
+            width:50px;
+            background-color: red;
+            position: absolute;
+            left:40%;
+        }
+    </style>
+    <script type="text/javascript">
+        var kontrolka = 1;
+        $(function(){
+            $("#dodaj").on("click",function(){
+                var val = $("input").val();
+                if(val != ""){
+                    var element = $("<li></li>").text(val);
+                    $(element).append(" <button class='mojaklasa'>X</button>");
+                    $("#mojalista").append(element);
+                    /*if(kontrolka == 1){
+                        $(element).css("backgroundcolor","red").slideUp;
+                        kontrolka = 2;
+                    }
+                    else{
+                        $("li").css("backgroundcolor","yellow");
+                        kontrolka = 1;
+                    };*/
+                    $("input").val("");
+                    $(".mojaklasa").on("click",function(){
+                        $(this).parent().remove();  
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="ogół">
+        <div id="plandnia">
+            <p>PLAN DNIA</p>
+            <br>
+            <br>
+            <input type="text" id="dolisty" placeholder="co masz dziś zrobić?">
+            <button id="dodaj">dodaj do listy</button>
+            <ol id="mojalista"></ol>
+        </div>
+        <div id="prawo">
+            <div id="animacja">
+                <p>ANIMACJA</p>
+
+                <div id="kwadracik"></div>
+            </div>
+            <div id="kal">
+                <p>BUNGULATOR</p>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $("#kwadracik").hover(function(){
+            $(this).animate({width:"+=50px"});
+            $(this).animate({left:"+=10%"});
+            $(this).animate({width:"-=50px"});
+            $(this).animate({height:"+=50px"});
+            $(this).animate({top:"+=10%"});
+            $(this).animate({height:"-=50px"});
+            $(this).animate({left:"-=5%"});
+            $(this).animate({width:"+=25px"});
+            $(this).animate({left:"-=5%"});
+            $(this).animate({width:"+=25px"});
+            $(this).animate({width:"-=50px"});
+
+
+            
+        /*},function(){
+            $(this).animate({width:"-=50px"});*/
+        })
+    </script>
+</body>
+</html>
